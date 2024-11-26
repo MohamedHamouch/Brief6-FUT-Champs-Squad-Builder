@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/images/FUT-small-icon.png">
+    <title>Squad Builder</title>
 
-    <title>Squad</title>
+    <link rel="stylesheet" href="../styles/squad.css">
 </head>
+
 <body>
-    
+    <main class="grid grid-cols-[70%,30%]">
+        <section id="field" class="relative">
+            <img src="../assets/images/field.svg" alt="" class="absolute -z-10">
+            <div id="lw" class="player"></div>
+            <div id="st" class="player"></div>
+            <div id="rw" class="player"></div>
+            <div id="cm1" class="player"></div>
+            <div id="cm2" class="player"></div>
+            <div id="cm3" class="player"></div>
+            <div id="lb" class="player"></div>
+            <div id="cb" class="player"></div>
+            <div id="cb" class="player"></div>
+            <div id="rb" class="player"></div>
+            <div id="gk" class="player"></div>
+
+
+        </section>
+
+        <section id="reserve" class="relative bg-yellow-200">
+            <div class="player"></div>
+            
+        </section>
+    </main>
+
+
 </body>
+
 </html>
