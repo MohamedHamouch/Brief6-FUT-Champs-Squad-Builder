@@ -1,33 +1,99 @@
-* {
-  box-sizing: border-box;
-}
-
 /* #field,
-  #reserve {
-    position: relative;
+#reserve {
+  position: relative;
   }
-
+  
   #reserve{
     background-color: black;
     width: 100%;
     height: 700px;
-  }
-  #st {
-    background-image: url("../assets/src/img/badge_gold.webp");
-    height: 100px;
+    }
+    #st {
+      background-image: url("../assets/src/img/badge_gold.webp");
+      height: 100px;
     width: 70px;
     background-size: contain;
     position: absolute;
     bottom: 0;
-  }
-  
- */
+    }
+    
+    */
+
+* {
+  box-sizing: border-box;
+}
+
+#field {
+  background-image: url("../assets/images/field.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#pitch {
+  grid-template-areas:
+    "lw void1 st void2 rw"
+    "void3 cm1 cm2 cm3 void4"
+    "lb cb1 void5 cb2 rb"
+    "void6 void7 gk void8 void9";
+
+  /* place-content: space-between, space-between; */
+}
 
 .player {
-  background-image: url(../assets/src/img/placeholder-card-normal.webp);
-  height: 100px;
-  width: 70px;
+  background-image: url("../assets/src/img/placeholder-card-normal.webp");
   background-size: contain;
-  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
 
+}
+
+.starter {
+  width: 100%;
+ 
+}
+
+#lw {
+  grid-area: lw;
+  /* margin-top: 30px; */
+}
+
+#st {
+  grid-area: st;
+}
+
+#rw {
+  grid-area: rw;
+}
+
+#cm1 {
+  grid-area: cm1;
+}
+
+#cm2 {
+  grid-area: cm2;
+}
+
+#cm3 {
+  grid-area: cm3;
+}
+
+#lb {
+  grid-area: lb;
+}
+
+#rb {
+  grid-area: rb;
+}
+
+#cb1 {
+  grid-area: cb1;
+}
+
+#cb2 {
+  grid-area: cb2;
+}
+
+#gk {
+  grid-area: gk;
 }
