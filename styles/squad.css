@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+/* #field,
+  #reserve {
+    position: relative;
+  }
+
+  #reserve{
+    background-color: black;
+    width: 100%;
+    height: 700px;
+  }
+  #st {
+    background-image: url("../assets/src/img/badge_gold.webp");
+    height: 100px;
+    width: 70px;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+  }
+  
+ */
+
+.player {
+  background-image: url(../assets/src/img/placeholder-card-normal.webp);
+  height: 100px;
+  width: 70px;
+  background-size: contain;
+  display: inline-block;
+
+}
