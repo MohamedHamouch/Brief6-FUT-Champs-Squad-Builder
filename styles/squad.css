@@ -33,19 +33,28 @@
 #pitch {
   grid-template-areas:
     "lw void1 st void2 rw"
-    "void3 cm1 cm2 cm3 void4"
+    "void3 cml cdm cmr void4"
     "lb cb1 void5 cb2 rb"
     "void6 void7 gk void8 void9";
 
   /* place-content: space-between, space-between; */
 }
 
-.player {
+.holder-card {
   background-image: url("../assets/src/img/placeholder-card-normal.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  color: white;
+  font-weight: 500;
+}
 
+.gold-card{
+  background-image: url("../assets/src/img/badge_gold_croped.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: 700;
 }
 
 .starter {
@@ -54,7 +63,8 @@
 
 #lw {
   grid-area: lw;
-  /* margin-top: 30px; */
+  position: relative;
+  top: 2.5rem;
 }
 
 #st {
@@ -63,18 +73,22 @@
 
 #rw {
   grid-area: rw;
+  position: relative;
+  top: 3rem;
 }
 
-#cm1 {
-  grid-area: cm1;
+#cml {
+  grid-area: cml;
 }
 
-#cm2 {
-  grid-area: cm2;
+#cdm {
+  grid-area: cdm;
+  position: relative;
+  top: 3rem;
 }
 
-#cm3 {
-  grid-area: cm3;
+#cmr {
+  grid-area: cmr;
 }
 
 #lb {
@@ -87,10 +101,14 @@
 
 #cb1 {
   grid-area: cb1;
+  position: relative;
+  top: 3rem;
 }
 
 #cb2 {
   grid-area: cb2;
+  position: relative;
+  top: 3rem;
 }
 
 #gk {

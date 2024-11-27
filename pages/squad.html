@@ -28,32 +28,63 @@
             </nav>
         </div>
     </header>
-    <main class="grid grid-cols-[70%,25%] h-[90vh] w-[95%] m-auto gap-x-4 justify-between">
+    <main class="grid grid-cols-[75%,24%] h-[110vh] w-[95%] m-auto gap-x-4 justify-between">
 
-        <section id="field" class="flex justify-center items-center w-[85%] mx-auto mt-4">
-            <div id="pitch" class="grid grid-cols-5 grid-rows-4 h-[98%] w-[85%] gap-y-2 justify-items-center">
-                <div id="lw" class="player starter "></div>
-                <div id="st" class="player starter"></div>
-                <div id="rw" class="player starter"></div>
-                <div id="cm1" class="player starter"></div>
-                <div id="cm2" class="player starter"></div>
-                <div id="cm3" class="player starter"></div>
-                <div id="lb" class="player starter"></div>
-                <div id="cb1" class="player starter"></div>
-                <div id="cb2" class="player starter"></div>
-                <div id="rb" class="player starter"></div>
-                <div id="gk" class="player starter">t'htg'hgh'gth</div>
+        <section id="field" class="flex justify-center items-center w-[95%] mx-auto mt-4">
+            <div id="pitch" class="relative grid grid-cols-5 grid-rows-4 h-[100%] w-[85%] gap-y-2 justify-items-center">
+
+                <button id="lw" class="holder-card starter">
+                Add LW
+                    <!-- <div class="player-card flex flex-col items-center justify-between h-[80%]">
+                        <img src="../assets/images/messi.test.webp" alt="" class="h-[65%]">
+                        <div class="flex flex-col gap-1">
+                            <p>Lionel Messi</p>
+                            <div class="flex justify-center gap-2">
+                                <p class="text-xs">RW</p>
+                                <p class="rating text-xs">97</p>
+                                <img src="../assets/images/ar-test.webp" alt="" class="h-4">
+                                <img src="../assets/images/InterMiami-test.webp" alt="" class="h-4">
+                            </div>
+                        </div>
+
+                    </div> -->
+                </button>
+                <button id="st" class="holder-card starter">
+                    Add ST
+                    <!-- <div class="player-card flex flex-col items-center justify-between h-[80%]">
+                        <img src="../assets/images/messi.test.webp" alt="" class="h-[60%]">
+                        <div class="flex flex-col">
+                            <p>Lionel Messi</p>
+                            <div class="flex justify-center gap-2">
+                                <p class="text-xs">RW</p>
+                                <p class="rating text-xs">97</p>
+                                <img src="../assets/images/ar-test.webp" alt="" class="h-4">
+                                <img src="../assets/images/InterMiami-test.webp" alt="" class="h-4">
+                            </div>
+                        </div>
+                        
+                    </div> -->
+                </button>
+                <button id="rw" class="holder-card starter">Add RW</button>
+                <button id="cml" class="holder-card starter">Add CM</button>
+                <button id="cdm" class="holder-card starter">Add CDM</button>
+                <button id="cmr" class="holder-card starter">Add CM</button>
+                <button id="lb" class="holder-card starter">Add LB</button>
+                <button id="cb1" class="holder-card starter">Add CB</button>
+                <button id="cb2" class="holder-card starter">Add CB</button>
+                <button id="rb" class="holder-card starter">Add RB</button>
+                <button id="gk" class="holder-card starter">Add GK</button>
             </div>
             <!-- <img src="../assets/images/field.svg" alt="" class="absolute top-0 right-1/2 left-1/2 -z-10 h-auto"> -->
         </section>
 
         <section id="bench" class="bg-gray-800 mt-6 h-[95%] grid grid-cols-2 grid-rows-3 justify-items-center">
-            <div class="player sub"></div>
-            <div class="player sub"></div>
-            <div class="player sub"></div>
-            <div class="player sub"></div>
-            <div class="player sub"></div>
-            <div class="player sub"></div>
+            <button class="holder-card sub">Add Reserve</button>
+            <button class="holder-card sub">Add Reserve</button>
+            <button class="holder-card sub">Add Reserve</button>
+            <button class="holder-card sub">Add Reserve</button>
+            <button class="holder-card sub">Add Reserve</button>
+            <button class="holder-card sub">Add Reserve</button>
 
         </section>
     </main>
