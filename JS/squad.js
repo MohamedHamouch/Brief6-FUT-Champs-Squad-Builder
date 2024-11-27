@@ -7,6 +7,8 @@ async function fetchPlayers(){
 }
 fetchPlayers();
 
-
-
-
+const positions = document.querySelectorAll('.player');
+console.log(positions)
+positions.forEach(position => {
+    position.addEventListener('click',()=> console.log(position))
+})
