@@ -119,3 +119,7 @@
 .sub {
   width: 70%;
 }
+
+#players-popup button{
+  height: 250px;
+}
