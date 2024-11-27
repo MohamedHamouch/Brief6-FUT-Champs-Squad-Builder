@@ -50,7 +50,6 @@
 
 .starter {
   width: 100%;
- 
 }
 
 #lw {
@@ -96,4 +95,8 @@
 
 #gk {
   grid-area: gk;
+}
+
+.sub {
+  width: 70%;
 }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../styles/squad.css">
 </head>
 
-<body>
+<body class="bg-[#404040]">
     <header class="bg-gray-800 py-3 shadow-lg h-1/5 text-white">
         <div class="container flex items-center justify-between">
 
@@ -28,10 +28,10 @@
             </nav>
         </div>
     </header>
-    <main class="grid grid-cols-[70%,25%] h-[100vh] w-[95%] m-auto gap-x-4 justify-between">
+    <main class="grid grid-cols-[70%,25%] h-[90vh] w-[95%] m-auto gap-x-4 justify-between">
 
-        <section id="field" class="h-full flex justify-center items-center">
-            <div id="pitch" class="grid grid-cols-5 grid-rows-4 h-[95%] w-[77%] gap-y-2">
+        <section id="field" class="flex justify-center items-center w-[85%] mx-auto mt-4">
+            <div id="pitch" class="grid grid-cols-5 grid-rows-4 h-[98%] w-[85%] gap-y-2 justify-items-center">
                 <div id="lw" class="player starter "></div>
                 <div id="st" class="player starter"></div>
                 <div id="rw" class="player starter"></div>
@@ -47,8 +47,13 @@
             <!-- <img src="../assets/images/field.svg" alt="" class="absolute top-0 right-1/2 left-1/2 -z-10 h-auto"> -->
         </section>
 
-        <section id="reserve" class="relative bg-yellow-200">
-            <div class="player"></div>
+        <section id="bench" class="bg-gray-800 mt-6 h-[95%] grid grid-cols-2 grid-rows-3 justify-items-center">
+            <div class="player sub"></div>
+            <div class="player sub"></div>
+            <div class="player sub"></div>
+            <div class="player sub"></div>
+            <div class="player sub"></div>
+            <div class="player sub"></div>
 
         </section>
     </main>
