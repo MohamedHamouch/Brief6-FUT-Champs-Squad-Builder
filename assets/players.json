@@ -39,7 +39,7 @@
         "nationality": "Belgium",
         "flag": "https://cdn.sofifa.net/flags/be.png",
         "club": "Manchester City",
-        "logo": "https://cdn.sofifa.net/players/239/085/25_120.png",
+        "logo": "https://cdn.sofifa.net/meta/team/9/120.png",
         "rating": 91,
         "pace": 74,
         "shooting": 86,
@@ -114,7 +114,7 @@
       },
       {
         "name": "Mohamed Salah",
-        "photo": "https://cdn.sofifa.net/players/192/985/25_120.png",
+        "photo": "https://cdn.sofifa.net/players/209/331/25_120.png",
         "position": "RW",
         "nationality": "Egypt",
         "flag": "https://cdn.sofifa.net/flags/eg.png",
@@ -321,12 +321,13 @@
         "physical": 63
       },
       {
-        "name": "Trent Alexander-Arnold",
+        "name": "Arnold",
         "photo": "https://cdn.sofifa.net/players/231/281/25_120.png",
         "position": "RB",
         "nationality": "England",
         "flag": "https://cdn.sofifa.net/flags/gb-eng.png",
         "club": "Liverpool",
+        "logo": "https://cdn.sofifa.net/meta/team/8/120.png",
         "rating": 87,
         "pace": 76,
         "shooting": 66,
