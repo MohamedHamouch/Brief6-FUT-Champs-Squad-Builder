@@ -29,7 +29,6 @@ positions.forEach(position => {
     });
 });
 
-x
 hidePopUpBtn.addEventListener('click', () => {
     popUp.classList.toggle('hidden');
 });
