@@ -5,7 +5,7 @@ data.forEach(player => {
     console.log(player)
 
     let card = document.createElement('div');
-    card.className = 'text-center flex flex-col justify-center m-auto player gold-card w-[80%] h-[300px]'
+    card.className = 'text-center flex flex-col justify-center m-auto player gold-card w-[80%] h-[18.75rem]'
     card.innerHTML = `
     <div class="player-card flex flex-col items-center justify-between h-[75%]">
                 <img src="${player.photo}" alt="" class="w-[70%]">

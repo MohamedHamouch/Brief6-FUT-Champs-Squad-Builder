@@ -123,3 +123,18 @@
 #players-popup button{
   height: 250px;
 }
+
+
+@keyframes popUp {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1; 
+  }
+}
+
+#popup * {
+  animation-name: popUp;
+  animation-duration: 0.3s;
+}

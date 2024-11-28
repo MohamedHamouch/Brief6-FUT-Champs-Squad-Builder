@@ -7,16 +7,19 @@ async function fetchPlayers() {
 }
 
 const playersData = JSON.parse(localStorage.getItem('playersData'));
-console.log(playersData);
+const positions = document.querySelectorAll('#squad .holder-card');
+const hidePopUpBtn = document.querySelector('#hide-popup-btn');
+const popUp = document.querySelector('#popup');
+const popUpList = document.querySelector('#popup-list');
+
+// console.log(playersData);
+
 window.onload = function () {
     fetchPlayers();
-    // showPopUpList(playersData);
 };
 
 
-const positions = document.querySelectorAll('#squad .player');
-const popUp = document.querySelector('#popup')
-// console.log(positions)
+
 let selectedPosition;
 positions.forEach(position => {
     position.addEventListener('click', () => {
@@ -26,19 +29,19 @@ positions.forEach(position => {
     });
 });
 
-const hidePopUpBtn = document.querySelector('#hide-popup-btn');
+x
 hidePopUpBtn.addEventListener('click', () => {
     popUp.classList.toggle('hidden');
 });
 
 
-const popUpList = document.querySelector('#popup-list');
+
 function showPopUpList(data) {
     popUpList.innerHTML = "";
     data.forEach(player => {
 
         const newCard = document.createElement('button');
-        newCard.className = 'player gold-card w-[200px] h-[300px]'
+        newCard.className = 'player gold-card w-[12.5rem] h-[18.75rem]'
         newCard.innerHTML =
             `      
             <div class="player-card flex flex-col items-center justify-between h-[75%]">
@@ -62,7 +65,7 @@ function showPopUpList(data) {
 
             selectedPosition.innerHTML = 
             ` <div class="player-card flex flex-col items-center justify-between h-[80%]">
-                    <img src="${player.photo}" alt="${player.name}" class="w-[60%]">
+                    <img src="${player.photo}" alt="${player.name}" class="w-[55%]">
                     <div class="flex flex-col gap-1">
                         <p class="text-sm">${player.name}</p>
                         <div class="flex justify-center gap-2">
@@ -75,6 +78,7 @@ function showPopUpList(data) {
 
                 </div>
             `
+            
         })
         popUpList.appendChild(newCard);
     });
