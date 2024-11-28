@@ -24,21 +24,23 @@
             <nav>
                 <ul class="flex gap-6 mr-8 text-lg">
                     <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
-                    <li><a href="../pages/squad.html" class="hover:text-yellow-400">Squad Builder</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Squad Builder</a></li>
+                    <li><a href="playersDB.html" class="hover:text-yellow-400">All players</a></li>
+
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- pop up to add players -->
-    <section id="popup" class="">
+    <section id="popup" class="hidden">
         <!-- blur bg -->
         <div class="w-full h-[120vh] items-center justify-center bg-black/50 backdrop-blur-md flex flex-col gap-4 absolute z-10">
             <h3 class="text-white text-2xl">Choose a Player <button id="hide-popup-btn" class="px-2 bg-red-700 font-extrabold"> X</button></h3>
-            <div id="popup-list" class="grid grid-cols-4 w-2/3 h-[80%] bg-gray-800 overflow-y-scroll gap-y-5 rounded-3xl py-6 justify-items-center">
+            <div id="popup-list" class="grid grid-cols-4 w-2/3 h-[80%] bg-gray-800 overflow-y-scroll rounded-3xl py-3 justify-items-center">
                 <button class="player gold-card w-[200px] h-[300px]">       
                     <div class="player-card flex flex-col items-center justify-between h-[75%]">
-                        <img src="../assets/images/messi.test.webp" alt="" class="">
+                        <img src="../assets/images/messi.test.webp" alt="" class="w-[70%]">
                         <div class="flex flex-col gap-3">
                             <p class="text-xl">Lionel Messi</p>
                             <div class="flex justify-center gap-2">
@@ -66,7 +68,7 @@
                 <button id="lw" class="player holder-card starter">
                     Add LW
                     <!-- <div class="player-card flex flex-col items-center justify-between h-[80%]">
-                        <img src="../assets/images/messi.test.webp" alt="" class="h-[65%]">
+                        <img src="../assets/images/messi.test.webp" alt="" class="w-[60%]">
                         <div class="flex flex-col gap-1">
                             <p>Lionel Messi</p>
                             <div class="flex justify-center gap-2">
@@ -79,22 +81,7 @@
 
                     </div> -->
                 </button>
-                <button id="st" class="player holder-card starter">
-                    Add ST
-                    <!-- <div class="player-card flex flex-col items-center justify-between h-[80%]">
-                        <img src="../assets/images/messi.test.webp" alt="" class="h-[60%]">
-                        <div class="flex flex-col">
-                            <p>Lionel Messi</p>
-                            <div class="flex justify-center gap-2">
-                                <p class="text-xs">RW</p>
-                                <p class="rating text-xs">97</p>
-                                <img src="../assets/images/ar-test.webp" alt="" class="h-4">
-                                <img src="../assets/images/InterMiami-test.webp" alt="" class="h-4">
-                            </div>
-                        </div>
-                        
-                    </div> -->
-                </button>
+                <button id="st" class="player holder-card starter">Add ST</button>
                 <button id="rw" class="player holder-card starter">Add RW</button>
                 <button id="cml" class="player holder-card starter">Add CM</button>
                 <button id="cdm" class="player holder-card starter">Add CDM</button>
@@ -110,7 +97,23 @@
 
         <section id="bench"
             class="bg-gray-800 mt-6 h-[95%] rounded-md grid grid-cols-2 grid-rows-3 justify-items-center">
-            <button id="sub1" class="player holder-card sub">Add Reserve</button>
+            <button id="sub1" class="player gold-card sub">
+                <!-- Add Reserve -->
+                <div class="player-card flex flex-col items-center justify-between h-[40%]">
+                    <img src="../assets/images/messi.test.webp" alt="" class="w-[70%]">
+                    <div class="flex flex-col gap-1">
+                        <p>Lionel Messi</p>
+                        <div class="flex justify-center gap-2">
+                            <p class="text-xs">RW</p>
+                            <p class="rating text-xs">97</p>
+                            <img src="../assets/images/ar-test.webp" alt="" class="h-4">
+                            <img src="../assets/images/InterMiami-test.webp" alt="" class="h-4">
+                        </div>
+                    </div>
+
+                </div>
+
+            </button>
             <button id="sub2" class="player holder-card sub">Add Reserve</button>
             <button id="sub3" class="player holder-card sub">Add Reserve</button>
             <button id="sub4" class="player holder-card sub">Add Reserve</button>

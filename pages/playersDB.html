@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="../styles/squad.css">
 
     <title>Players Database</title>
-  </head>
+</head>
 
-  <body>
-    <div class="bg-black h-24">
-    </div>
-  </body>
+<body class="bg-[#404040]">
+    <header class="bg-gray-800 py-3 shadow-lg h-1/5 text-white">
+        <div class="container flex items-center justify-between">
+
+            <div class="flex items-center">
+                <img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo" class="h-12 w-12 mx-4">
+                <h1 class="text-xl font-bold">FUT Champs Squad Builder</h1>
+            </div>
+
+            <nav>
+                <ul class="flex gap-6 mr-8 text-lg">
+                    <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
+                    <li><a href="squad.html" class="hover:text-yellow-400">Squad Builder</a></li>
+                    <li><a href="playersDB.html" class="hover:text-yellow-400">All players</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 class="text-center text-5xl pt-8 text-yellow-400 font-semibold">EA FC 25 All Players</h1>
+
+
+    <section id="playersList" class="grid grid-cols-5 px-24 py-8 justify-items-center gap-y-5">
+        
+    </section>
+
+    <script src="../JS/playersDB.js"></script>
+</body>
+
 </html>
