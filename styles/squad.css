@@ -58,6 +58,13 @@
   font-weight: 700;
 }
 
+.player{
+  transition: all 0.3s;
+}
+.player:hover{
+  scale: 1.05;
+}
+
 .starter {
   width: 100%;
 }
