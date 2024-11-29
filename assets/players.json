@@ -463,6 +463,38 @@
         "dribbling": 62,
         "defending": 81,
         "physical": 85
+      },
+      {
+        "name": "Araujo",
+        "photo": "https://cdn.sofifa.net/players/253/163/25_120.png",
+        "position": "CB",
+        "nationality": "Uruguay",
+        "flag": "https://cdn.sofifa.net/flags/uy.png",
+        "club": "Barcelona",
+        "logo": "https://cdn.sofifa.net/meta/team/83/120.png",
+        "rating": 85,
+        "pace": 82,
+        "shooting": 53,
+        "passing": 64,
+        "dribbling": 62,
+        "defending": 85,
+        "physical": 84
+      },
+      {
+        "name": "Dias",
+        "photo": "https://cdn.sofifa.net/players/239/818/25_120.png",
+        "position": "CB",
+        "nationality": "Portugal",
+        "flag": "https://cdn.sofifa.net/flags/pt.png",
+        "club": "Manchester City",
+        "logo": "https://cdn.sofifa.net/meta/team/9/120.png",
+        "rating": 88,
+        "pace": 67,
+        "shooting": 39,
+        "passing": 70,
+        "dribbling": 62,
+        "defending": 89,
+        "physical": 87
       }
     ]
   }
