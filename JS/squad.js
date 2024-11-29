@@ -25,13 +25,8 @@ hidePopUpBtn.addEventListener('click', () => {
 positions.forEach(positionPlace => {
     positionPlace.addEventListener('click', () => {
         popUp.classList.toggle('hidden');
+        filterPosition(positionPlace);
         selectedPlace = positionPlace;
-        // console.log(positionPlace.name)
-        filterPosition(selectedPlace);
-        if (playersXI.includes(positionPlace.name)) {
-            const playerIndex = playersXI.indexOf(positionPlace.name);
-            playersXI.splice(playerIndex, 1);
-        }
     });
 });
 
@@ -57,6 +52,12 @@ function showPopUpList(data) {
              </div>
         `
         newCard.addEventListener('click', () => {
+
+            if (playersXI.includes(selectedPlace.name)) {
+                const playerIndex = playersXI.indexOf(selectedPlace.name);
+                playersXI.splice(playerIndex, 1);
+            }
+            
             popUp.classList.add('hidden');
             selectedPlace.innerHTML = "";
             selectedPlace.classList.remove('holder-card');
@@ -96,7 +97,7 @@ function showPopUpList(data) {
             selectedPlace.innerHTML =
                 `<div class="flex w-[70%]">
                         <div class="flex flex-col items-center pt-4">
-                            <span class="font-extrabold text-sm">${player.rating}</span>
+                            <span class="font-extrabold text-base leading-4">${player.rating}</span>
                             <span class="font-bold text-xs">${player.position}</span>
                             <div class="flex flex-col justify-center items-center gap-1 w-5">
                                 <img src="${player.flag}" alt="">
@@ -132,7 +133,7 @@ function showPopUpList(data) {
                           <span class="text-[.625rem] font-bold">${player[attValue6]}</span>
                         </div>
                     </div>
-                    <button class="remove-btn text-[0.625rem] bg-red-600 text-[#e3b656] px-1 rounded-full font-bold">X</button>
+                    <button class="remove-btn h-[0.9375rem] overflow-ellipsis text-[0.625rem] bg-red-600 text-[#e3b656] px-1 rounded-full font-bold absolute bottom-1">X</button>
                  `
             const removeBtn = selectedPlace.querySelector('.remove-btn');
             console.log(removeBtn);
@@ -148,15 +149,12 @@ function showPopUpList(data) {
                     const playerIndex = playersXI.indexOf(player.name);
                     playersXI.splice(playerIndex, 1);
                 }
-                
-                
             });
 
             playersXI.push(player.name);
             // console.log(playersXI);
         })
         popUpList.appendChild(newCard);
-
     });
 }
 

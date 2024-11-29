@@ -63,6 +63,13 @@
 .player:hover{
   scale: 1.05;
 }
+.remove-btn{
+  display: none;
+}
+.player:hover .remove-btn{
+  display: inline;
+  scale: 1;
+}
 
 .starter {
   width: 100%;
