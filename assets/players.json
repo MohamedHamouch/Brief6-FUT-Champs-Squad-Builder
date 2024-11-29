@@ -231,7 +231,7 @@
         "nationality": "Norway",
         "flag": "https://cdn.sofifa.net/flags/no.png",
         "club": "Manchester City",
-        "logo": "https://cdn.sofifa.net/players/239/085/25_120.png",
+        "logo": "https://cdn.sofifa.net/meta/team/9/120.png",
         "rating": 91,
         "pace": 89,
         "shooting": 94,
@@ -415,6 +415,54 @@
         "reflexes": 90,
         "speed": 50,
         "positioning": 85
+      },
+      {
+        "name": "Lamine Yamal",
+        "photo": "https://cdn.sofifa.net/players/277/643/25_120.png",
+        "position": "RW",
+        "nationality": "Spain",
+        "flag": "https://cdn.sofifa.net/flags/es.png",
+        "club": "Barcelona",
+        "logo": "https://cdn.sofifa.net/meta/team/83/120.png",
+        "rating": 83,
+        "pace": 84,
+        "shooting": 78,
+        "passing": 85,
+        "dribbling": 88,
+        "defending": 31,
+        "physical": 49
+      },
+      {
+        "name": "Balde",
+        "photo": "https://cdn.sofifa.net/players/263/578/25_120.png",
+        "position": "LB",
+        "nationality": "Spain",
+        "flag": "https://cdn.sofifa.net/flags/es.png",
+        "club": "Barcelona",
+        "logo": "https://cdn.sofifa.net/meta/team/83/120.png",
+        "rating": 84,
+        "pace": 90,
+        "shooting": 68,
+        "passing": 70,
+        "dribbling": 80,
+        "defending": 74,
+        "physical": 77
+      },
+      {
+        "name": "Walker",
+        "photo": "https://cdn.sofifa.net/players/188/377/25_120.png",
+        "position": "RB",
+        "nationality": "England",
+        "flag": "https://cdn.sofifa.net/flags/gb-eng.png",
+        "club": "Manchester City",
+        "logo": "https://cdn.sofifa.net/meta/team/9/120.png",
+        "rating": 83,
+        "pace": 92,
+        "shooting": 62,
+        "passing": 76,
+        "dribbling": 62,
+        "defending": 81,
+        "physical": 85
       }
     ]
   }
