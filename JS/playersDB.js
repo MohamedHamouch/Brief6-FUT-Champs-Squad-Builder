@@ -10,7 +10,7 @@ data.forEach(player => {
     <div class="player-card flex flex-col items-center justify-between h-[75%]">
                 <img src="${player.photo}" alt="" class="w-[70%]">
                 <div class="flex flex-col gap-3">
-                    <p class="text-base">${player.name}</p>
+                    <p class="text-lg">${player.name}</p>
                     <div class="flex justify-center gap-2">
                         <p class="">${player.position}</p>
                         <p class="rating">${player.rating}</p>
