@@ -7,16 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="../assets/images/FUT-small-icon.png">
     <link rel="stylesheet" href="../styles/squad.css">
-
+    <link rel="stylesheet" href="../styles/playersDB.css">
     <title>Players Database</title>
 </head>
 
-<body class="bg-[#404040]">
+<body class="backdrop-blur-[1.5px]">
     <header class="bg-gray-800 py-3 shadow-lg h-1/5 text-white">
         <div class="container flex items-center justify-between">
 
             <div class="flex items-center">
-                <a href="../index.html"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo" class="h-12 w-12 mx-4"></button></a>
+                <img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo" class="h-12 w-12 mx-4">
                 <h1 class="text-xl font-bold">FUT Champs Squad Builder</h1>
             </div>
 
@@ -24,19 +24,19 @@
                 <ul class="flex gap-6 mr-8 text-lg">
                     <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
                     <li><a href="squad.html" class="hover:text-yellow-400">Squad Builder</a></li>
-                    <li><a href="#" class="hover:text-yellow-400">All players</a></li>
+                    <li><a href="playersDB.html" class="hover:text-yellow-400">All players</a></li>
 
                 </ul>
             </nav>
         </div>
     </header>
 
-    <h1 class="text-center text-5xl pt-8 text-yellow-400 font-semibold">EA FC 25 All Players</h1>
+    <main class="bg-[#404040]/60">
+        <h1 class="text-center text-5xl pt-8 text-yellow-400 font-semibold">EA FC 25 All Players</h1>
+        <section id="playersList" class="grid grid-cols-5 w-[75%] mx-auto py-8">
 
-
-    <section id="playersList" class="grid grid-cols-5 px-24 py-8 justify-items-center gap-y-5">
-        
-    </section>
+        </section>
+    </main>
 
     <script src="../JS/playersDB.js"></script>
 </body>
