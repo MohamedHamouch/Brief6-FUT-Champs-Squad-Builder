@@ -1,0 +1,5 @@
+body {
+    background-image: url('../assets/images/pattern-background.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+}
