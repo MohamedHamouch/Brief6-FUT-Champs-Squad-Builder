@@ -3,6 +3,9 @@ async function fetchPlayers() {
     const data = await response.json();
     const players = data.players;
     console.log(players);
+    data.players.forEach((player, index) => {
+          player.id = `${index}`;
+      });
     localStorage.setItem('playersData', JSON.stringify(players));
 }
 window.onload = function () {
@@ -66,7 +69,7 @@ function showPopUpList(data) {
             attName5 = "POS";
             attName6 = "SPE";
         }
-        
+
         const newCard = document.createElement('button');
         newCard.className = 'text-center flex flex-col justify-center player gold-card h-[13.75rem] w-[10rem] items-center'
         newCard.innerHTML =
@@ -84,27 +87,27 @@ function showPopUpList(data) {
     <p class="font-bold text-[1rem]">${player.name}</p>
     <div class="flex gap-1">
         <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-medium">${attName1}</span>
+          <span class="text-[.6rem] font-bold">${attName1}</span>
           <span class="text-[.63rem] font-bold ">${player[attValue1]}</span>
         </div>
         <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-medium">${attName2}</span>
+          <span class="text-[.6rem] font-bold">${attName2}</span>
           <span class="text-[.63rem] font-bold ">${player[attValue2]}</span>
         </div>
         <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-medium">${attName3}</span>
+          <span class="text-[.6rem] font-bold">${attName3}</span>
           <span class="text-[.63rem] font-bold ">${player[attValue3]}</span>
         </div>
         <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-medium">${attName4}</span>
+          <span class="text-[.6rem] font-bold">${attName4}</span>
           <span class="text-[.63rem] font-bold">${player[attValue4]}</span>
         </div>
         <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-medium">${attName5}</span>
+          <span class="text-[.6rem] font-bold">${attName5}</span>
           <span class="text-[.63rem] font-bold ">${player[attValue5]}</span>
         </div>
         <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-medium">${attName6}</span>
+          <span class="text-[.6rem] font-bold">${attName6}</span>
           <span class="text-[.63rem] font-bold">${player[attValue6]}</span>
         </div>
     </div>`;
@@ -120,7 +123,7 @@ function showPopUpList(data) {
             selectedPlace.innerHTML = "";
             selectedPlace.classList.remove('holder-card');
             selectedPlace.classList.add('gold-card');
-            selectedPlace.name = `${player.name}`
+            selectedPlace.name = `${player.id}`
             selectedPlace.innerHTML =
                 `<div class="flex w-[70%]">
                         <div class="flex flex-col items-center pt-4">
@@ -134,29 +137,29 @@ function showPopUpList(data) {
                         <img src="${player.photo}" alt="" class="w-[81%]">
                     </div>
                     <p class="font-bold text-[.9rem]">${player.name}</p>
-                    <div class="flex gap-1">
+                    <div class="flex gap-[2px]">
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-medium">${attName1}</span>
+                          <span class="text-[.6rem] font-bold">${attName1}</span>
                           <span class="text-[.625rem] font-bold ">${player[attValue1]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-medium">${attName2}</span>
+                          <span class="text-[.6rem] font-bold">${attName2}</span>
                           <span class="text-[.625rem] font-bold ">${player[attValue2]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-medium">${attName3}</span>
+                          <span class="text-[.6rem] font-bold">${attName3}</span>
                           <span class="text-[.625rem] font-bold ">${player[attValue3]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-medium">${attName4}</span>
+                          <span class="text-[.6rem] font-bold">${attName4}</span>
                           <span class="text-[.625rem] font-bold">${player[attValue4]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-medium">${attName5}</span>
+                          <span class="text-[.6rem] font-bold">${attName5}</span>
                           <span class="text-[.625rem] font-bold ">${player[attValue5]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-medium">${attName6}</span>
+                          <span class="text-[.6rem] font-bold">${attName6}</span>
                           <span class="text-[.625rem] font-bold">${player[attValue6]}</span>
                         </div>
                     </div>
@@ -172,13 +175,13 @@ function showPopUpList(data) {
                 selectedPlace.classList.remove('gold-card');
                 selectedPlace.classList.add('holder-card');
                 selectedPlace.name = "";
-                if (playersXI.includes(player.name)) {
-                    const playerIndex = playersXI.indexOf(player.name);
+                if (playersXI.includes(player.id)) {
+                    const playerIndex = playersXI.indexOf(player.id);
                     playersXI.splice(playerIndex, 1);
                 }
             });
 
-            playersXI.push(player.name);
+            playersXI.push(player.id);
             // console.log(playersXI);
         })
         popUpList.appendChild(newCard);
@@ -187,7 +190,7 @@ function showPopUpList(data) {
 
 function filterPosition(FilteringPositionPlace) {
     let positionName = FilteringPositionPlace.getAttribute('data-position');
-    const filteredPlayers = playersData.filter(player => player.position === positionName && !playersXI.includes(player.name));
+    const filteredPlayers = playersData.filter(player => player.position === positionName && !playersXI.includes(player.id));
     showPopUpList(filteredPlayers);
 }
 
