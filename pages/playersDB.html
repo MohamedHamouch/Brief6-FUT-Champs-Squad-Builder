@@ -35,6 +35,28 @@
 
     <main class="bg-[#404040]/60">
         <h1 class="text-center text-5xl pt-8 text-yellow-400 font-semibold">EA FC 25 All Players</h1>
+
+        <form action=""
+            class="my-8 bg-orange-100 p-3 flex flex-wrap w-[50%] justify-between rounded-md gap-3 justify-self-center">
+            <div>
+                <label class="text-blue-950 font-bold text-lg">Filter Positions:</label>
+                <select name="filter" id="posFilter" class="border-2 rounded-md border-black text-sm w-[7.5rem] p-1">
+                    <option value="none" class="text-center">All Players</option>
+                    <option value="FW" class="text-center">Forwards</option>
+                    <option value="MD" class="text-center">Midfielders</option>
+                    <option value="DF" class="text-center">Defenders</option>
+                    <option value="GK" class="text-center">Goalkepers</option>
+                </select>
+            </div>
+            <div class="SortSection flex gap-x-2">
+                <label class="text-blue-950 font-bold text-lg">Sort Players</label>
+                <select name="sort" id="sort" class="border-2 rounded-md border-black text-sm w-[7.5rem] p-1">
+                    <option value="rating" class="text-center">Rating</option>
+                    <option value="name" class="text-center">Name</option>
+                </select>
+            </div>
+        </form>
+
         <section id="playersList" class="grid grid-cols-5 w-[75%] mx-auto py-8">
 
         </section>
