@@ -33,7 +33,7 @@
         </div>
     </header>
 
-    <main class="bg-[#404040]/60">
+    <main class="bg-[#404040]/60 min-h-[90vh]">
         <h1 class="text-center text-5xl pt-8 text-yellow-400 font-semibold">EA FC 25 All Players</h1>
 
         <form action=""
@@ -41,7 +41,7 @@
             <div>
                 <label class="text-blue-950 font-bold text-lg">Filter Positions:</label>
                 <select name="filter" id="posFilter" class="border-2 rounded-md border-black text-sm w-[7.5rem] p-1">
-                    <option value="none" class="text-center">All Players</option>
+                    <option value="all" class="text-center">All Players</option>
                     <option value="FW" class="text-center">Forwards</option>
                     <option value="MD" class="text-center">Midfielders</option>
                     <option value="DF" class="text-center">Defenders</option>
@@ -51,6 +51,7 @@
             <div class="SortSection flex gap-x-2">
                 <label class="text-blue-950 font-bold text-lg">Sort Players</label>
                 <select name="sort" id="sort" class="border-2 rounded-md border-black text-sm w-[7.5rem] p-1">
+                    <option value="order" class="text-center">Order</option>
                     <option value="rating" class="text-center">Rating</option>
                     <option value="name" class="text-center">Name</option>
                 </select>
