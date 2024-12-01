@@ -10,4 +10,6 @@ async function fetchPlayers() {
 }
 window.onload = function () {
     fetchPlayers();
+    // localStorage.clear();
 };
+

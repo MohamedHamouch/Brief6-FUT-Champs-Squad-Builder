@@ -4,6 +4,7 @@ const sort = document.querySelector('#sort');
 
 const data = JSON.parse(localStorage.getItem('playersData'));
 showPlayers(data);
+
 function showPlayers(players) {
   container.innerHTML = '';
   players.forEach(player => {
@@ -89,29 +90,31 @@ function showPlayers(players) {
 function updatePlayers() {
   const sortBy = sort.value;
   const selectedPosition = filter.value;
+  console.log(sortBy, selectedPosition)
   let filteredPlayers = Array.from(data);
 
-  if (sortBy === 'rating') {
+  if (sortBy === 'desc') {
     filteredPlayers.sort((a, b) => b.rating - a.rating);
-  }
-  if (sortBy === 'name') {
-    filteredPlayers.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortBy === 'desc') {
+    filteredPlayers.sort((a, b) => a.rating - b.rating);
+  } else if (sortBy === 'az') {
+    filteredPlayers.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
+  } else if (sortBy === 'za') {
+    filteredPlayers.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
+  } else {
+    filteredPlayers.sort((a, b) => a.id - b.id);
   }
 
   if (selectedPosition === 'FW') {
-    filteredPlayers = data.filter(player => player.position === 'LW' || player.position === 'RW' || player.position === 'ST');
-  }
-
-  if (selectedPosition === 'MD') {
-    filteredPlayers = data.filter(player => player.position === 'CM');
-  }
-
-  if (selectedPosition === 'DF') {
-    filteredPlayers = data.filter(player => player.position === 'RB' || player.position === 'LB' || player.position === 'CB');
-  }
-
-  if (selectedPosition === 'GK') {
-    filteredPlayers = data.filter(player => player.position === 'GK');
+    filteredPlayers = filteredPlayers.filter(player => player.position === 'LW' || player.position === 'RW' || player.position === 'ST');
+  } else if (selectedPosition === 'MD') {
+    filteredPlayers = filteredPlayers.filter(player => player.position === 'CM');
+  } else if (selectedPosition === 'DF') {
+    filteredPlayers = filteredPlayers.filter(player => player.position === 'RB' || player.position === 'LB' || player.position === 'CB');
+  } else if (selectedPosition === 'GK') {
+    filteredPlayers = filteredPlayers.filter(player => player.position === 'GK');
+  } else {
+    filteredPlayers = filteredPlayers.filter(player => player.position);
   }
   showPlayers(filteredPlayers)
 }

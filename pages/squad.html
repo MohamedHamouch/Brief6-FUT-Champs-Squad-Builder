@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="../assets/images/FUT-small-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/squad.css">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/FUT-small-icon.png">
     <title>Squad Builder</title>
 
-    <link rel="stylesheet" href="../styles/squad.css">
+
 </head>
 
 <body class="bg-[#404040]">
@@ -18,14 +26,15 @@
         <div class="container flex items-center justify-between">
 
             <div class="flex items-center">
-                <a href="../index.html"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo" class="h-12 w-12 mx-4"></button></a>
+                <a href="../index.html"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
+                            class="h-12 w-12 mx-4"></button></a>
                 <h1 class="text-xl font-bold">FUT Champs Squad Builder</h1>
             </div>
 
             <nav>
                 <ul class="flex gap-6 mr-8 text-lg">
                     <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
-                    <li><a href="#" class="hover:text-yellow-400">Squad Builder</a></li>
+                    <li><a href="#" class="text-yellow-400">Squad Builder</a></li>
                     <li><a href="playersDB.html" class="hover:text-yellow-400">All players</a></li>
 
                 </ul>
@@ -93,25 +102,36 @@
         <section id="field" class="flex justify-center items-center w-[95%] h-[100vh] mx-auto mt-4">
             <div id="pitch" class="grid grid-cols-5 grid-rows-4 h-[100%] w-[85%] gap-y-2 justify-items-center">
 
-                <button id="lw" data-position="LW" name="" class="player holder-card starter flex flex-col justify-center items-center">Add LW</button>
-                <button id="st" data-position="ST" name="" class="player holder-card starter flex flex-col justify-center items-center">Add ST</button>
-                <button id="rw" data-position="RW" name="" class="player holder-card starter flex flex-col justify-center items-center">Add RW</button>
-                <button id="cml" data-position="CM" name="" class="player holder-card starter flex flex-col justify-center items-center">Add CM</button>
-                <button id="cdm" data-position="CM" name="" class="player holder-card starter flex flex-col justify-center items-center">Add CM</button>
-                <button id="cmr" data-position="CM" name="" class="player holder-card starter flex flex-col justify-center items-center">Add CM</button>
-                <button id="lb" data-position="LB" name="" class="player holder-card starter flex flex-col justify-center items-center">Add LB</button>
-                <button id="cb1" data-position="CB" name="" class="player holder-card starter flex flex-col justify-center items-center">Add CB</button>
-                <button id="cb2" data-position="CB" name="" class="player holder-card starter flex flex-col justify-center items-center">Add CB</button>
-                <button id="rb" data-position="RB" name="" class="player holder-card starter flex flex-col justify-center items-center">Add RB</button>
-                <button id="gk" data-position="GK" name="" class="player holder-card starter flex flex-col justify-center items-center">Add GK</button>
+                <button id="lw" data-position="LW" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add LW</button>
+                <button id="st" data-position="ST" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add ST</button>
+                <button id="rw" data-position="RW" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add RW</button>
+                <button id="cml" data-position="CM" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add CM</button>
+                <button id="cdm" data-position="CM" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add CM</button>
+                <button id="cmr" data-position="CM" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add CM</button>
+                <button id="lb" data-position="LB" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add LB</button>
+                <button id="cb1" data-position="CB" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add CB</button>
+                <button id="cb2" data-position="CB" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add CB</button>
+                <button id="rb" data-position="RB" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add RB</button>
+                <button id="gk" data-position="GK" name=""
+                    class="player holder-card starter flex flex-col justify-center items-center">Add GK</button>
             </div>
             <!-- <img src="../assets/images/field.svg" alt="" class="absolute top-0 right-1/2 left-1/2 -z-10 h-auto"> -->
         </section>
 
         <section class="bg-gray-800 mt-6 h-[95%] rounded-md">
-           
+
         </section>
-       
+
     </main>
 
     <script src="../JS/squad.js"></script>

@@ -180,4 +180,3 @@ function filterPosition(FilteringPositionPlace) {
     showPopUpList(filteredPlayers);
 }
 
-// localStorage.clear();
