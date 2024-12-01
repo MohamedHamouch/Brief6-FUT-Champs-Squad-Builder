@@ -1,28 +1,3 @@
-/* #field,
-#reserve {
-  position: relative;
-  }
-  
-  #reserve{
-    background-color: black;
-    width: 100%;
-    height: 700px;
-    }
-    #st {
-      background-image: url("../assets/src/img/badge_gold.webp");
-      height: 100px;
-    width: 70px;
-    background-size: contain;
-    position: absolute;
-    bottom: 0;
-    }
-    
-    */
-
-* {
-  box-sizing: border-box;
-}
-
 #field {
   background-image: url("../assets/images/field.svg");
   background-repeat: no-repeat;
