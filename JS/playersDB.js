@@ -95,7 +95,7 @@ function updatePlayers() {
 
   if (sortBy === 'desc') {
     filteredPlayers.sort((a, b) => b.rating - a.rating);
-  } else if (sortBy === 'desc') {
+  } else if (sortBy === 'asc') {
     filteredPlayers.sort((a, b) => a.rating - b.rating);
   } else if (sortBy === 'az') {
     filteredPlayers.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
