@@ -2,4 +2,48 @@ body {
     background-image: url('../assets/images/pattern-background.jpg');
     background-size: contain;
     background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+}
+
+@media screen and (max-width: 1410px) {
+    :root {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    :root {
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    :root {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    :root {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 694px) {
+    :root {
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width: 430px) {
+    :root {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    :root {
+        font-size: 0.55rem;
+    }
 }

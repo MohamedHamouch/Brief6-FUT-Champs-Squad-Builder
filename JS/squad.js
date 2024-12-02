@@ -58,46 +58,47 @@ function showPopUpList(data) {
     }
 
     const newCard = document.createElement('button');
-    newCard.className = 'text-center flex flex-col justify-center player gold-card h-[13.75rem] w-[10rem] items-center'
+    newCard.className = 'text-center flex flex-col justify-center player gold-card h-[12.375rem] w-[9rem] items-center';
     newCard.innerHTML =
-      `<div class="flex w-[90%]">
-        <div class="flex flex-col items-center pt-4">
-            <span class="font-extrabold text-base leading-4">${player.rating}</span>
-            <span class="font-bold text-xs">${player.position}</span>
-            <div class="flex flex-col justify-center items-center gap-1 w-5">
-                <img src="${player.flag}" alt="">
-                <img src="${player.logo}" alt="">
-            </div>
-        </div>
-        <img src="${player.photo}" alt="" class="w-[80%]">
-    </div>
-    <p class="font-bold text-[1rem]">${player.name}</p>
-    <div class="flex gap-1">
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-bold">${attName1}</span>
-          <span class="text-[.63rem] font-bold ">${player[attValue1]}</span>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-bold">${attName2}</span>
-          <span class="text-[.63rem] font-bold ">${player[attValue2]}</span>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-bold">${attName3}</span>
-          <span class="text-[.63rem] font-bold ">${player[attValue3]}</span>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-bold">${attName4}</span>
-          <span class="text-[.63rem] font-bold">${player[attValue4]}</span>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-bold">${attName5}</span>
-          <span class="text-[.63rem] font-bold ">${player[attValue5]}</span>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-[.6rem] font-bold">${attName6}</span>
-          <span class="text-[.63rem] font-bold">${player[attValue6]}</span>
-        </div>
-    </div>`;
+      `<div class="flex">
+          <div class="flex flex-col items-center pt-4">
+              <span class="font-extrabold text-[0.9rem] leading-4">${player.rating}</span>
+              <span class="font-bold text-[0.9rem]">${player.position}</span>
+              <div class="flex flex-col justify-center items-center gap-1 w-5">
+                  <img src="${player.flag}" alt="">
+                  <img src="${player.logo}" alt="">
+              </div>
+          </div>
+          <img src="${player.photo}" alt="" class="w-[6.46rem]">
+      </div>
+      <p class="font-bold text-[0.9rem]">${player.name}</p>
+      <div class="flex gap-1">
+          <div class="flex flex-col justify-center items-center">
+              <span class="text-[0.54rem] font-bold">${attName1}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValue1]}</span>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+              <span class="text-[0.54rem] font-bold">${attName2}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValue2]}</span>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+              <span class="text-[0.54rem] font-bold">${attName3}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValue3]}</span>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+              <span class="text-[0.54rem] font-bold">${attName4}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValue4]}</span>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+              <span class="text-[0.54rem] font-bold">${attName5}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValue5]}</span>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+              <span class="text-[0.54rem] font-bold">${attName6}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValue6]}</span>
+          </div>
+      </div>`;
+    
 
     newCard.addEventListener('click', () => {
 
@@ -112,7 +113,7 @@ function showPopUpList(data) {
       selectedPlace.classList.add('gold-card');
       selectedPlace.name = `${player.id}`
       selectedPlace.innerHTML =
-        `<div class="flex w-[70%]">
+        `<div class="flex">
                         <div class="flex flex-col items-center pt-4">
                             <span class="font-extrabold text-base leading-4">${player.rating}</span>
                             <span class="font-bold text-xs">${player.position}</span>
@@ -121,9 +122,9 @@ function showPopUpList(data) {
                                 <img src="${player.logo}" alt="">
                             </div>
                         </div>
-                        <img src="${player.photo}" alt="" class="w-[81%]">
+                        <img src="${player.photo}" alt="" class="w-[6.20rem]">
                     </div>
-                    <p class="font-bold text-[.9rem]">${player.name}</p>
+                    <p class="font-bold text-[.85rem]">${player.name}</p>
                     <div class="flex gap-[2px]">
                         <div class="flex flex-col justify-center items-center">
                           <span class="text-[.6rem] font-bold">${attName1}</span>
@@ -223,9 +224,9 @@ function showReserves(players) {
       }
 
       const resPlayer = document.createElement('div');
-      resPlayer.className = 'player gold-card starter flex flex-col justify-center items-center h-[12rem]';
+      resPlayer.className = 'player gold-card flex flex-col justify-center items-center w-[10.6869rem] h-[12rem]';
       resPlayer.innerHTML =
-        ` <div class="flex w-[70%]">
+        ` <div class="flex">
                         <div class="flex flex-col items-center pt-4">
                             <span class="font-extrabold text-base leading-4">${player.rating}</span>
                             <span class="font-bold text-xs">${player.position}</span>
@@ -234,9 +235,9 @@ function showReserves(players) {
                                 <img src="${player.logo}" alt="">
                             </div>
                         </div>
-                        <img src="${player.photo}" alt="" class="w-[81%]">
+                        <img src="${player.photo}" alt="" class="w-[6.5625rem]">
                     </div>
-                    <p class="font-bold text-[.9rem]">${player.name}</p>
+                    <p class="font-bold text-[.8rem] xl:text-[.9rem]">${player.name}</p>
                     <div class="flex gap-[2px]">
                         <div class="flex flex-col justify-center items-center">
                           <span class="text-[.6rem] font-bold">${attName1}</span>
