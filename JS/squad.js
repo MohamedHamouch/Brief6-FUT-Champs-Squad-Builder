@@ -122,33 +122,33 @@ function showPopUpList(data) {
                                 <img src="${player.logo}" alt="">
                             </div>
                         </div>
-                        <img src="${player.photo}" alt="" class="w-[6.20rem]">
+                        <img src="${player.photo}" alt="" class="sm:w-[6.20rem]">
                     </div>
-                    <p class="font-bold text-[.85rem]">${player.name}</p>
+                    <p class="font-bold text-[.75] md:text-[.85rem]">${player.name}</p>
                     <div class="flex gap-[2px]">
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName1}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue1]}</span>
+                          <span class="text-[0.5rem] font-bold">${attName1}</span>
+                          <span class="text-[.525rem] font-bold ">${player[attValue1]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName2}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue2]}</span>
+                          <span class="text-[0.5rem] font-bold">${attName2}</span>
+                          <span class="text-[.525rem] font-bold ">${player[attValue2]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName3}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue3]}</span>
+                          <span class="text-[.5rem] font-bold">${attName3}</span>
+                          <span class="text-[.525rem] font-bold ">${player[attValue3]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName4}</span>
-                          <span class="text-[.625rem] font-bold">${player[attValue4]}</span>
+                          <span class="text-[.5rem] font-bold">${attName4}</span>
+                          <span class="text-[.525rem] font-bold">${player[attValue4]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName5}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue5]}</span>
+                          <span class="text-[.5rem] font-bold">${attName5}</span>
+                          <span class="text-[.525rem] font-bold ">${player[attValue5]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName6}</span>
-                          <span class="text-[.625rem] font-bold">${player[attValue6]}</span>
+                          <span class="text-[.5rem] font-bold">${attName6}</span>
+                          <span class="text-[.525rem] font-bold">${player[attValue6]}</span>
                         </div>
                     </div>
                     <button id="${player.id}" class="remove-btn h-[0.9375rem] overflow-ellipsis text-[0.625rem] bg-red-700 text-white px-1 rounded-full font-bold absolute bottom-1">X</button>
