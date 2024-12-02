@@ -20,36 +20,37 @@
     <title>Players Database</title>
 </head>
 
-<body class="backdrop-blur-[1.5px]">
+<body class="backdrop-blur-[1.5px] h-full">
 
-    <header class="bg-gray-800 py-3 shadow-lg text-white">
-        <div class="container flex items-center justify-between">
+    <header class="bg-gray-800 py-3 shadow-lg w-full text-white">
+        <div class="flex items-center justify-between">
 
             <div class="flex items-center">
-               <a href="../index.html"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
-                            class="h-12 w-12 mx-4"></button></a>
-                <h1 class="text-xl font-bold">FUT Champs Squad Builder</h1>
+                <a href="../index.html"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
+                            class="w-12 h-auto mx-4"></button></a>
+                <h1 class="text-sm sm:text-base md:text-lg font-bold">FUT Squad Builder</h1>
             </div>
 
             <nav>
-                <ul class="flex gap-6 mr-8 text-lg">
-                    <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
+                <ul class="flex gap-2 lg:gap-6 mr-2 lg:mr-8 text-xs sm:text-sm md:text-base lg:text-lg">
+                    <li><a href="../index.html" class="text-yellow-400">Home</a></li>
                     <li><a href="squad.html" class="hover:text-yellow-400">Squad Builder</a></li>
-                    <li><a href="playersDB.html" class="text-yellow-400">All players</a></li>
-
+                    <li><a href="#" class="hover:text-yellow-400">All players</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="bg-[#404040]/60 min-h-[90vh]">
-        <h1 class="text-center text-6xl pt-12 text-yellow-400 font-semibold">EA FC 25 All Players</h1>
+    <main class="bg-[#404040]/60 h-fit">
+        <h1 class="text-center text-2xl md:text-5xl lg:text-6xl pt-12 text-yellow-400 font-semibold">EA FC 25 All
+            Players</h1>
 
         <form action=""
-            class="my-8 bg-orange-100 p-3 flex flex-wrap w-[50%] justify-between rounded-md gap-3 justify-self-center">
+            class="my-8 bg-orange-100 p-3 flex flex-wrap w-[90%] sm:w-[90%] md:w-[70%] lg:w-[50%] justify-between rounded-md gap-3 justify-self-center">
             <div>
                 <label class="text-blue-950 font-bold text-lg">Filter Positions</label>
-                <select name="filter" id="posFilter" class="border-2 rounded-md text-center border-black text-sm w-[7.5rem] p-1">
+                <select name="filter" id="posFilter"
+                    class="border-2 rounded-md text-center border-black text-sm w-[7.5rem] p-1">
                     <option value="all">All Players</option>
                     <option value="FW">Forwards</option>
                     <option value="MD">Midfielders</option>
@@ -59,21 +60,42 @@
             </div>
             <div class="SortSection flex gap-x-2 text-center">
                 <label class="text-blue-950 font-bold text-lg">Sort Players</label>
-                <select name="sort" id="sort" class="border-2 rounded-md border-black text-sm w-[7.5rem] p-1 text-center">
+                <select name="sort" id="sort"
+                    class="border-2 rounded-md border-black text-sm w-[7.5rem] p-1 text-center">
                     <option value="order">Order</option>
                     <option value="desc">Rating Desc.</option>
                     <option value="asc">Rating Asc.</option>
-                    <option value="az" >Name A-Z</option>
-                    <option value="za" >Name Z-A</option>
+                    <option value="az">Name A-Z</option>
+                    <option value="za">Name Z-A</option>
                 </select>
             </div>
         </form>
 
-        <section id="playersList" class="grid grid-cols-5 w-[75%] mx-auto py-8">
+        <section id="playersList"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-[75%] mx-auto py-8">
 
         </section>
     </main>
 
+    <footer class="bg-gray-800 text-white p-2 mt-12">
+        <div class="mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center">
+                <a href="#"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
+                            class="w-10 sm:w-14 md:w-20 h-auto"></button></a>
+                <h1 class="text-xs sm:text-sm font-bold">FUT Squad Builder</h1>
+            </div>
+            <nav>
+                <ul class="flex flex-col sm:flex-row gap-2 lg:gap-6 text-xs sm:text-sm md:text-base">
+                    <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
+                    <li><a href="squad.html" class="hover:text-yellow-400">Squad Builder</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">All players</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-sm">&copy; 2024 FUT Champs Squad Builder. All Rights Reserved.</p>
+        </div>
+    </footer>
     <script src="../JS/playersDB.js"></script>
 </body>
 

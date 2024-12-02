@@ -21,22 +21,20 @@
 </head>
 
 <body class="bg-[#404040]">
-
-    <header class="bg-gray-800 py-3 shadow-lg h-1/5 text-white">
-        <div class="container flex items-center justify-between">
+    <header class="bg-gray-800 py-3 shadow-lg w-full text-white">
+        <div class="flex items-center justify-between">
 
             <div class="flex items-center">
                 <a href="../index.html"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
-                            class="h-12 w-12 mx-4"></button></a>
-                <h1 class="text-xl font-bold">FUT Champs Squad Builder</h1>
+                            class="w-12 h-auto mx-4"></button></a>
+                <h1 class="text-sm sm:text-base md:text-lg font-bold">FUT Squad Builder</h1>
             </div>
 
             <nav>
-                <ul class="flex gap-6 mr-8 text-lg">
-                    <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
-                    <li><a href="#" class="text-yellow-400">Squad Builder</a></li>
+                <ul class="flex gap-2 lg:gap-6 mr-2 lg:mr-8 text-xs sm:text-sm md:text-base lg:text-lg">
+                    <li><a href="../index.html" class="text-yellow-400">Home</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Squad Builder</a></li>
                     <li><a href="playersDB.html" class="hover:text-yellow-400">All players</a></li>
-
                 </ul>
             </nav>
         </div>
@@ -46,11 +44,11 @@
     <section id="popup" class="hidden">
         <!-- blur bg -->
         <div
-            class="fixed w-full h-[100vh] items-center justify-center bg-black/50 backdrop-blur-md flex flex-col gap-4 top-0 z-10">
+            class="fixed w-full h-full items-center justify-center bg-black/50 backdrop-blur-md flex flex-col gap-4 top-0 z-10">
             <h3 class="text-white text-3xl font-bold">Choose a Player <button id="hide-popup-btn"
                     class="w-8 h-8 rounded-full text-xl bg-red-700 font-extrabold"> X</button></h3>
             <div id="popup-list"
-                class="flex w-[68%] h-[50%] bg-gray-800 overflow-auto flex-wrap gap-2 rounded-xl py-3 pl-4 items-center">
+                class="flex bg-gray-800 overflow-auto gap-4 rounded-xl py-6 px-8 items-center">
 
                 <!-- <button class="text-center flex flex-col justify-center player gold-card h-[13.75rem] w-[10rem] items-center">
                     <div class="flex w-[90%]">
@@ -97,10 +95,10 @@
 
     </section>
 
-    <h1 class="text-center text-6xl pt-12 text-yellow-400 font-semibold">Build Youd Dream Team</h1>
+    <h1 class="text-center text-5xl pt-12 pb-5 text-yellow-400 font-semibold">Build Youd Dream Team</h1>
     <main id="squad" class="grid grid-cols-[75%,24%] w-[95%] m-auto gap-x-4 gap-y-6 justify-between">
 
-        <section id="field" class="flex justify-center items-center w-[95%] h-[100vh] mx-auto mt-4">
+        <section id="field" class="flex justify-center items-center w-[95%] h-[100vh] mx-auto mt-4 order">
             <div id="pitch" class="grid grid-cols-5 grid-rows-4 h-[100%] w-[85%] gap-y-2 justify-items-center">
 
                 <button id="lw" data-position="LW" name=""
@@ -129,13 +127,17 @@
             <!-- <img src="../assets/images/field.svg" alt="" class="absolute top-0 right-1/2 left-1/2 -z-10 h-auto"> -->
         </section>
 
-        <section class="bg-gray-800 mt-6 h-[95%] rounded-md">
+        <section class="bg-gray-800 mt-6 h-[95%] rounded-md shadow-md">
+            <form action="">
 
+            </form>
         </section>
+
+
         <section class="mt-6 w-[95%] m-auto">
             <h2 class="bg-[#404040] text-3xl text-white mx-auto mb-6 w-[88%]">Reserve players :</h2>
-            <section class=" bg-gray-800 rounded-md ">
-                <div id="reserve-list" class="grid grid-cols-5 h-[100%] w-[88%] m-auto min-h-40 gap-y-2 py-5 ">
+            <section class=" bg-gray-800 rounded-md shadow-md">
+                <div id="reserve-list" class="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 h-[100%] w-[88%] m-auto min-h-40 gap-y-2 py-5 ">
                     <!-- <div class="player gold-card starter flex flex-col justify-center items-center h-[12rem]">
                         <div class="flex w-[70%]">
                             <div class="flex flex-col items-center pt-4">
@@ -182,6 +184,26 @@
         </section>
 
     </main>
+
+    <footer class="bg-gray-800 text-white p-2 mt-12">
+        <div class="mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center">
+                <a href="#"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
+                    class="w-10 sm:w-14 md:w-20 h-auto"></button></a>
+        <h1 class="text-xs sm:text-sm font-bold">FUT Squad Builder</h1>
+            </div>
+            <nav>
+                <ul class="flex flex-col sm:flex-row gap-2 lg:gap-6 text-xs sm:text-sm md:text-base">
+                    <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Squad Builder</a></li>
+                    <li><a href="playersDB.html" class="hover:text-yellow-400">All players</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-sm">&copy; 2024 FUT Champs Squad Builder. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="../JS/squad.js"></script>
 </body>
