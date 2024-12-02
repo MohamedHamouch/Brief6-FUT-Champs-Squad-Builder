@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 #field {
   background-image: url("../assets/images/field.svg");
   background-repeat: no-repeat;
@@ -37,7 +42,7 @@
 }
 
 .player:hover {
-  /* scale: 1.05; */
+  scale: 1.05;
   filter: drop-shadow(0 0 5px #fae0a2)
 }
 
@@ -126,14 +131,15 @@
   }
 }
 
-#popup * {
+#popup *,
+#popup-form * {
   animation-name: popUp;
   animation-duration: 0.3s;
 }
 
 @media screen and (max-width: 490px) {
   :root {
-    font-size: 0.8.5rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -147,7 +153,8 @@
   :root {
     font-size: 0.75rem;
   }
-  .player-name{
+
+  .player-name {
     font-size: 2px;
     width: 100%;
     font-weight: 500;

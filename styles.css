@@ -1,5 +1,22 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 560px) {
+  :root {
+      font-size: 0.9rem;
   }
-  
+}
+
+@media screen and (max-width: 440px) {
+  :root {
+      font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+      font-size: 0.65rem;
+  }
+}
