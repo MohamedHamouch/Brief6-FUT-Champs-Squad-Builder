@@ -270,7 +270,7 @@ addPlayerForm.addEventListener('submit', (e) => {
   newObj.flag = '../assets/images/fifa_globe.png';
   newObj.position = positionInput.value;
 
-
+  console.log(newObj)
   playersData.push(newObj);
   showReserves(playersData);
   formPopUp.classList.toggle('hidden');
