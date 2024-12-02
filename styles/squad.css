@@ -131,8 +131,13 @@
   animation-duration: 0.3s;
 }
 
+@media screen and (max-width: 490px) {
+  :root {
+    font-size: 0.8.5rem;
+  }
+}
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 440px) {
   :root {
     font-size: 0.8rem;
   }
@@ -141,5 +146,10 @@
 @media screen and (max-width: 370px) {
   :root {
     font-size: 0.75rem;
+  }
+  .player-name{
+    font-size: 2px;
+    width: 100%;
+    font-weight: 500;
   }
 }

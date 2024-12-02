@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -45,143 +48,68 @@
         <!-- blur bg -->
         <div
             class="fixed w-full h-full items-center justify-center bg-black/50 backdrop-blur-md flex flex-col gap-4 top-0 z-10">
-            <h3 class="text-white text-3xl font-bold">Choose a Player <button id="hide-popup-btn"
+            <h3 class="text-white text-xl md:text-2xl lg:text-3xl font-bold">Choose a Player <button id="hide-popup-btn"
                     class="w-8 h-8 rounded-full text-xl bg-red-700 font-extrabold"> X</button></h3>
             <div id="popup-list"
                 class="flex flex-wrap w-[80%] bg-gray-800 overflow-auto gap-4 rounded-xl py-6 px-8 justify-center md:justify-start">
 
-                <!-- <button class="text-center flex flex-col justify-center player gold-card h-[13.75rem] w-[10rem] items-center">
-                    <div class="flex w-[90%]">
-                        <div class="flex flex-col items-center pt-4">
-                            <span class="font-extrabold text-base leading-4">88</span>
-                            <span class="font-bold text-xs">CB</span>
-                            <div class="flex flex-col justify-center items-center gap-1 w-5">
-                                <img src="ar-test.webp" alt="">
-                                <img src="InterMiami-test.webp" alt="">
-                            </div>
-                        </div>
-                        <img src="messi.test.webp" alt="" class="w-[80%]">
-                    </div>
-                    <p class="font-bold text-[1rem]">Messi</p>
-                    <div class="flex gap-1">
-                        <div class="flex flex-col justify-center items-center">
-                            <span class="text-[.6rem] font-bold">XXX</span>
-                            <span class="text-[.63rem] font-bold ">66</span>
-                        </div>
-                        <div class="flex flex-col justify-center items-center">
-                            <span class="text-[.6rem] font-bold">XXX</span>
-                            <span class="text-[.63rem] font-bold ">88</span>
-                        </div>
-                        <div class="flex flex-col justify-center items-center">
-                            <span class="text-[.6rem] font-bold">XXX</span>
-                            <span class="text-[.63rem] font-bold ">88</span>
-                        </div>
-                        <div class="flex flex-col justify-center items-center">
-                            <span class="text-[.6rem] font-bold">AAA</span>
-                            <span class="text-[.63rem] font-bold">55</span>
-                        </div>
-                        <div class="flex flex-col justify-center items-center">
-                            <span class="text-[.6rem] font-bold">GGG</span>
-                            <span class="text-[.63rem] font-bold ">66</span>
-                        </div>
-                        <div class="flex flex-col justify-center items-center">
-                            <span class="text-[.6rem] font-bold">YYY</span>
-                            <span class="text-[.63rem] font-bold">98</span>
-                        </div>
-                    </div>
-                </button> -->
             </div>
         </div>
 
     </section>
 
-    <h1 class="text-center text-xl md:text-3xl lg:text-5xl pt-8 md:pt-12 pb-5 text-yellow-400 font-semibold">Build Your Dream Team</h1>
+    <h2 class="text-center text-xl md:text-3xl lg:text-5xl pt-8 md:pt-12 pb-5 text-yellow-400 font-semibold">Build Your
+        Dream Team</h2>
     <main id="squad"
-        class="grid grid-cols-1 lg:grid-cols-[68%,31%] lg:w-[95%] w-full m-auto gap-x-4 gap-y-6 justify-between">
+        class="grid grid-cols-1 xl:grid-cols-[68%,31%] lg:w-[95%] w-full m-auto gap-x-4 gap-y-6 justify-between">
 
-        <section id="field" class="flex justify-center items-center w-full lg:w-[95%] h-full mx-auto mt-4 bg-cover md:bg-contain">
-            <div id="pitch"
-                class="grid grid-cols-5 grid-rows-4 w-full md:w-[85%] gap-y-2 justify-items-center">
+        <section id="field"
+            class="flex justify-center items-center w-full lg:w-[95%] h-full mx-auto mt-4 bg-cover md:bg-contain">
+            <div id="pitch" class="grid grid-cols-5 grid-rows-4 w-full md:w-[85%] gap-y-2 justify-items-center">
 
                 <button id="lw" data-position="LW" name=""
                     class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
                     LW</button>
                 <button id="st" data-position="ST" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add ST</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    ST</button>
                 <button id="rw" data-position="RW" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add RW</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    RW</button>
                 <button id="cml" data-position="CM" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add CM</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    CM</button>
                 <button id="cdm" data-position="CM" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add CM</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    CM</button>
                 <button id="cmr" data-position="CM" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add CM</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    CM</button>
                 <button id="lb" data-position="LB" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add LB</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    LB</button>
                 <button id="cb1" data-position="CB" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add CB</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    CB</button>
                 <button id="cb2" data-position="CB" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add CB</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    CB</button>
                 <button id="rb" data-position="RB" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add RB</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    RB</button>
                 <button id="gk" data-position="GK" name=""
-                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add GK</button>
+                    class="player holder-card starter flex flex-col justify-center items-center h-[11rem]">Add
+                    GK</button>
             </div>
             <!-- <img src="../assets/images/field.svg" alt="" class="absolute top-0 right-1/2 left-1/2 -z-10 h-auto"> -->
         </section>
-
-        <section class="bg-gray-800 mt-6 h-[95%] rounded-md shadow-md">
-            <form action="">
-
-            </form>
-        </section>
-
-
-        <section class="mt-6 w-[80%] sm:w-[70%] lg:w-[95%] m-auto">
-            <h2 class="bg-[#404040] text-3xl text-white mx-auto mb-6 w-[88%]">Reserve players :</h2>
-            <section class=" bg-gray-800 rounded-md shadow-md">
+        <section class="flex flex-col mt-6 w-[80%] sm:w-[70%] lg:w-[95%] m-auto gap-3">
+            <button id="show-form" class="bg-yellow-400 hover:bg-yellow-500 font-semibold p-5 xl:p-3 rounded-md w-fit xl:w-1/2 m-auto">Add Players <i
+                    class="fa-solid fa-user-plus"></i></button>
+            <p class="bg-[#404040] text-xl md:text-3xl text-white mx-auto mb-2 w-[88%]">Reserve players :</p>
+            <section class=" bg-gray-800 rounded-md shadow-md overflow-y-auto">
                 <div id="reserve-list"
-                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 h-[100%] w-[88%] m-auto min-h-40 gap-y-2 py-5 justify-items-center ">
-                    <!-- <div class="player gold-card starter flex flex-col justify-center items-center h-[12rem]">
-                        <div class="flex w-[70%]">
-                            <div class="flex flex-col items-center pt-4">
-                                <span class="font-extrabold text-base leading-4">55</span>
-                                <span class="font-bold text-xs">RW</span>
-                                <div class="flex flex-col justify-center items-center gap-1 w-5">
-                                    <img src="../assets/images/ar-test.webp" alt="">
-                                    <img src="../assets/images/InterMiami-test.webp" alt="">
-                                </div>
-                            </div>
-                            <img src="../assets/images/messi.test.webp" alt="" class="w-[81%]">
-                        </div>
-                        <p class="font-bold text-[.9rem]">Leo Messi</p>
-                        <div class="flex gap-[2px]">
-                            <div class="flex flex-col justify-center items-center">
-                              <span class="text-[.6rem] font-bold">XXX</span>
-                              <span class="text-[.625rem] font-bold ">00</span>
-                            </div>
-                            <div class="flex flex-col justify-center items-center">
-                              <span class="text-[.6rem] font-bold">XXX</span>
-                              <span class="text-[.625rem] font-bold ">88</span>
-                            </div>
-                            <div class="flex flex-col justify-center items-center">
-                              <span class="text-[.6rem] font-bold">XXX</span>
-                              <span class="text-[.625rem] font-bold ">88</span>
-                            </div>
-                            <div class="flex flex-col justify-center items-center">
-                              <span class="text-[.6rem] font-bold">XXX</span>
-                              <span class="text-[.625rem] font-bold">88</span>
-                            </div>
-                            <div class="flex flex-col justify-center items-center">
-                              <span class="text-[.6rem] font-bold">XXX</span>
-                              <span class="text-[.625rem] font-bold ">88</span>
-                            </div>
-                            <div class="flex flex-col justify-center items-center">
-                              <span class="text-[.6rem] font-bold">XXX</span>
-                              <span class="text-[.625rem] font-bold">88</span>
-                            </div>
-                        </div>
-                    </div> -->
+                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-2 h-[26rem] xl:h-[90vh] w-[90%] m-auto min-h-40 gap-y-2 py-5 justify-items-center ">
                 </div>
             </section>
 
@@ -189,12 +117,91 @@
 
     </main>
 
+
+    <section id="popup-form" class="hidden">
+        <div
+            class="fixed w-full h-full items-center justify-center bg-black/50 backdrop-blur-md flex flex-col gap-4 top-0 z-10">
+            <p class="text-white text-xl md:text-2xl lg:text-3xl font-bold text-center mx-auto my-6">Fill The Form to
+                Add players <button id="hide-form-btn" class="w-8 h-8 rounded-full text-xl bg-red-700 font-extrabold">
+                    X</button></p>
+            <form action="" id="add-player-form"
+                class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-[80%] sm:w-[60%] lg:w-[60%] p-6 bg-gray-800 rounded-2xl">
+                <fieldset class="flex flex-col gap-3">
+                    <label for="name" class="text-white">Player Name :</label>
+                    <input type="text" name="name" id="name" required
+                        class="rounded-md w-2/3 h-9 pl-1 self-center text-sm">
+                </fieldset>
+                <fieldset class="flex flex-col gap-3">
+                    <label for="club" class="text-white">Player Club :</label>
+                    <input type="text" name="club" id="club" required
+                        class="rounded-md w-2/3 h-9 pl-1 self-center text-sm">
+                </fieldset>
+                <fieldset class="flex flex-col gap-3">
+                    <label for="nationality" required class="text-white">Nationality :</label>
+                    <input type="text" name="nationality" id="nationality" required
+                        class="rounded-md w-2/3 h-9 pl-1 self-center text-sm">
+                </fieldset>
+                <fieldset class="flex flex-col gap-3">
+                    <label for="position-input" class="text-white">Position :</label>
+                    <select name="position" id="position-input" required class="rounded-md w-2/3 h-9 pl-1 self-center text-sm">
+                        <option value="none" disabled selected>Select a position</option>
+                        <option value="ST">ST</option>
+                        <option value="LW">LW</option>
+                        <option value="RW">RW</option>
+                        <option value="CM">CM</option>
+                        <option value="RB">RB</option>
+                        <option value="LB">LB</option>
+                        <option value="CB">CB</option>
+                        <option value="GK">GK</option>
+                    </select>
+                </fieldset>
+                <fieldset class="grid grid-cols-3 justify-center justify-items-center">
+                    <div class="flex flex-col gap-2 items-center">
+                        <label for="player-at1" class="att-label text-white">PAC</label>
+                        <input type="number" id="player-at1" name="pace" min="01" max="99" required
+                            class="att-input rounded-md w-14 h-9 pl-1 text-sm">
+                    </div>
+                    <div class="flex flex-col gap-2 items-center">
+                        <label for="player-at2" class="att-label text-white">SHO</label>
+                        <input type="number" id="player-at2" name="shooting" min="01" max="99" required
+                            class="att-input rounded-md w-14 h-9 pl-1 text-sm">
+                    </div>
+                    <div class="flex flex-col gap-2 items-center">
+                        <label for="player-at3" class="att-label text-white">PAS</label>
+                        <input type="number" id="player-at3" name="passing" min="01" max="99" required
+                            class="att-input rounded-md w-14 h-9 pl-1 text-sm">
+                    </div>
+                </fieldset>
+                <fieldset class="grid grid-cols-3 justify-center justify-items-center">
+                    <div class="flex flex-col gap-2 items-center">
+                        <label for="player-at4" class="att-label text-white">DRI</label>
+                        <input type="number" id="player-at4" name="dribbling" min="01" max="99" required
+                            class="att-input rounded-md w-14 h-9 pl-1 text-sm">
+                    </div>
+                    <div class="flex flex-col gap-2 items-center">
+                        <label for="player-at5" class="att-label text-white">DEF</label>
+                        <input type="number" id="player-at5" name="defending" min="01" max="99" required
+                            class="att-input rounded-md w-14 h-9 pl-1 text-sm">
+                    </div>
+                    <div class="flex flex-col gap-2 items-center">
+                        <label for="player-at6" class="att-label text-white">PHY</label>
+                        <input type="number" id="player-at6" name="physical" min="01" max="99" required
+                            class="att-input rounded-md w-14 h-9 pl-1 text-sm">
+                    </div>
+                </fieldset>
+                <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 w-fit p-2 rounded-md ">Add the Player</button>
+            </form>
+        </div>
+
+    </section>
+
+
     <footer class="bg-gray-800 text-white p-2 mt-12">
         <div class="mx-auto flex flex-wrap justify-between items-center">
             <div class="flex items-center">
                 <a href="#"><button><img src="../assets/images/FUT-small-icon.png" alt="FUT Champs Logo"
                             class="w-10 sm:w-14 md:w-20 h-auto"></button></a>
-                <h1 class="text-xs sm:text-sm font-bold">FUT Squad Builder</h1>
+                <h5 class="text-xs sm:text-sm font-bold">FUT Squad Builder</h5>
             </div>
             <nav>
                 <ul class="flex flex-col sm:flex-row gap-2 lg:gap-6 text-xs sm:text-sm md:text-base">
