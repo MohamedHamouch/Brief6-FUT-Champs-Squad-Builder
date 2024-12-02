@@ -1,5 +1,5 @@
 async function fetchPlayers() {
-    const response = await fetch('assets/players.json');
+    const response = await fetch('./assetsassets/players.json');
     const data = await response.json();
     const players = data.players;
     console.log(players);
