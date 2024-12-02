@@ -4,6 +4,15 @@ const hidePopUpBtn = document.querySelector('#hide-popup-btn');
 const popUp = document.querySelector('#popup');
 const popUpList = document.querySelector('#popup-list');
 const reserveList = document.querySelector('#reserve-list');
+const openFormBtn = document.querySelector('#show-form');
+const formPopUp = document.querySelector('#popup-form')
+const closeFormBtn = document.querySelector('#hide-form-btn');
+const addPlayerForm = document.querySelector('#add-player-form');
+const positionInput = document.querySelector('#position-input');
+const attLabels = addPlayerForm.querySelectorAll('.att-label');
+const attInputs = addPlayerForm.querySelectorAll('.att-input');
+const inputs = addPlayerForm.querySelectorAll('input');
+// console.log(attInputs);
 
 let selectedPlace;
 let playersXI = [];
@@ -25,36 +34,15 @@ function showPopUpList(data) {
   data.forEach(player => {
 
 
-    let attValue1, attValue2, attValue3, attValue4, attValue5, attValue6;
-    let attName1, attName2, attName3, attName4, attName5, attName6;
+    let attNames = [];
+    let attValues = [];
+
     if (player.position != "GK") {
-      attValue1 = "pace";
-      attValue2 = "shooting";
-      attValue3 = "passing";
-      attValue4 = "dribbling";
-      attValue5 = "defending";
-      attValue6 = "physical";
-
-      attName1 = "PAC";
-      attName2 = "SHO";
-      attName3 = "PAS";
-      attName4 = "DRI";
-      attName5 = "DEF";
-      attName6 = "PHY";
+      attValues = ["pace", "shooting", "passing", "dribbling", "defending", "physical"];
+      attNames = ["PAC", "SHO", "PAS", "DRI", "DEF", "PHY"];
     } else {
-      attValue1 = "diving";
-      attValue2 = "handling";
-      attValue3 = "kicking";
-      attValue4 = "reflexes";
-      attValue5 = "positioning";
-      attValue6 = "speed";
-
-      attName1 = "DIV";
-      attName2 = "HAN";
-      attName3 = "KIC";
-      attName4 = "REF";
-      attName5 = "POS";
-      attName6 = "SPE";
+      attValues = ["diving", "handling", "kicking", "reflexes", "positioning", "speed"];
+      attNames = ["DIV", "HAN", "KIC", "REF", "POS", "SPE"];
     }
 
     const newCard = document.createElement('button');
@@ -62,7 +50,7 @@ function showPopUpList(data) {
     newCard.innerHTML =
       `<div class="flex">
           <div class="flex flex-col items-center pt-4">
-              <span class="font-extrabold text-[0.9rem] leading-4">${player.rating}</span>
+              <span class="font-extrabold text-[1.1rem] leading-4">${player.rating}</span>
               <span class="font-bold text-[0.9rem]">${player.position}</span>
               <div class="flex flex-col justify-center items-center gap-1 w-5">
                   <img src="${player.flag}" alt="">
@@ -74,31 +62,31 @@ function showPopUpList(data) {
       <p class="font-bold text-[0.9rem]">${player.name}</p>
       <div class="flex gap-1">
           <div class="flex flex-col justify-center items-center">
-              <span class="text-[0.54rem] font-bold">${attName1}</span>
-              <span class="text-[0.567rem] font-bold">${player[attValue1]}</span>
+              <span class="text-[0.54rem] font-bold">${attNames[5]}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValues[0]]}</span>
           </div>
           <div class="flex flex-col justify-center items-center">
-              <span class="text-[0.54rem] font-bold">${attName2}</span>
-              <span class="text-[0.567rem] font-bold">${player[attValue2]}</span>
+              <span class="text-[0.54rem] font-bold">${attNames[1]}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValues[1]]}</span>
           </div>
           <div class="flex flex-col justify-center items-center">
-              <span class="text-[0.54rem] font-bold">${attName3}</span>
-              <span class="text-[0.567rem] font-bold">${player[attValue3]}</span>
+              <span class="text-[0.54rem] font-bold">${attNames[2]}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValues[2]]}</span>
           </div>
           <div class="flex flex-col justify-center items-center">
-              <span class="text-[0.54rem] font-bold">${attName4}</span>
-              <span class="text-[0.567rem] font-bold">${player[attValue4]}</span>
+              <span class="text-[0.54rem] font-bold">${attNames[3]}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValues[3]]}</span>
           </div>
           <div class="flex flex-col justify-center items-center">
-              <span class="text-[0.54rem] font-bold">${attName5}</span>
-              <span class="text-[0.567rem] font-bold">${player[attValue5]}</span>
+              <span class="text-[0.54rem] font-bold">${attNames[4]}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValues[4]]}</span>
           </div>
           <div class="flex flex-col justify-center items-center">
-              <span class="text-[0.54rem] font-bold">${attName6}</span>
-              <span class="text-[0.567rem] font-bold">${player[attValue6]}</span>
+              <span class="text-[0.54rem] font-bold">${attNames[5]}</span>
+              <span class="text-[0.567rem] font-bold">${player[attValues[5]]}</span>
           </div>
       </div>`;
-    
+
 
     newCard.addEventListener('click', () => {
 
@@ -117,51 +105,51 @@ function showPopUpList(data) {
                         <div class="flex flex-col items-center pt-4">
                             <span class="font-extrabold text-base leading-4">${player.rating}</span>
                             <span class="font-bold text-xs">${player.position}</span>
-                            <div class="flex flex-col justify-center items-center gap-1 w-5">
+                            <div class="flex flex-col justify-center items-center gap-1 w-3 sm:w-5">
                                 <img src="${player.flag}" alt="">
                                 <img src="${player.logo}" alt="">
                             </div>
                         </div>
-                        <img src="${player.photo}" alt="" class="sm:w-[6.20rem]">
+                        <img src="${player.photo}" alt="" class="h-[5rem] w-[5.9rem] sm:h-auto sm:w-[6.20rem]">
                     </div>
-                    <p class="font-bold text-[.75] md:text-[.85rem]">${player.name}</p>
+                    <p class="font-bold text-[.65rem] sm:text-[.75] md:text-[.85rem]">${player.name}</p>
                     <div class="flex gap-[2px]">
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[0.5rem] font-bold">${attName1}</span>
-                          <span class="text-[.525rem] font-bold ">${player[attValue1]}</span>
+                          <span class="text-[0.45rem] font-bold">${attNames[0]}</span>
+                          <span class="text-[.475rem] sm:text-[.525rem] font-bold ">${player[attValues[0]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[0.5rem] font-bold">${attName2}</span>
-                          <span class="text-[.525rem] font-bold ">${player[attValue2]}</span>
+                          <span class="text-[0.45rem] font-bold">${attNames[1]}</span>
+                          <span class=".player-name text-[.47rem] sm:text-[.525rem] font-bold ">${player[attValues[1]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.5rem] font-bold">${attName3}</span>
-                          <span class="text-[.525rem] font-bold ">${player[attValue3]}</span>
+                          <span class="text-[.45rem] sm:text-[.525rem] font-bold">${attNames[2]}</span>
+                          <span class="text-[.47rem] sm:text-[.525rem] font-bold ">${player[attValues[2]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.5rem] font-bold">${attName4}</span>
-                          <span class="text-[.525rem] font-bold">${player[attValue4]}</span>
+                          <span class="text-[.45rem] font-bold">${attNames[3]}</span>
+                          <span class="text-[.47rem] sm:text-[.525rem] font-bold">${player[attValues[3]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.5rem] font-bold">${attName5}</span>
-                          <span class="text-[.525rem] font-bold ">${player[attValue5]}</span>
+                          <span class="text-[.45rem] font-bold">${attNames[4]}</span>
+                          <span class="text-[.47rem] sm:text-[.525rem] font-bold ">${player[attValues[4]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.5rem] font-bold">${attName6}</span>
-                          <span class="text-[.525rem] font-bold">${player[attValue6]}</span>
+                          <span class="text-[.45rem] sm:text-[.5rem] font-bold">${attNames[5]}</span>
+                          <span class="text-[.47rem] sm:text-[.525rem] font-bold">${player[attValues[5]]}</span>
                         </div>
                     </div>
                     <button id="${player.id}" class="remove-btn h-[0.9375rem] overflow-ellipsis text-[0.625rem] bg-red-700 text-white px-1 rounded-full font-bold absolute bottom-1">X</button>
                  `;
       const removeBtn = selectedPlace.querySelector('.remove-btn');
-      console.log(removeBtn);
+      // console.log(removeBtn);
       removeBtn.addEventListener('click', (event) => {
         event.stopPropagation();
-        let theID = removeBtn.id;
+        const theID = removeBtn.id;
         const place = document.querySelector(`[name="${theID}"]`);
-        console.log(place)
-        let positionShort = place.getAttribute('data-position');
-        console.log(positionShort);
+        // console.log(place)
+        const positionShort = place.getAttribute('data-position');
+        // console.log(positionShort);
         place.innerHTML = `Add ${positionShort}`;
         place.classList.remove('gold-card');
         place.classList.add('holder-card');
@@ -182,7 +170,7 @@ function showPopUpList(data) {
 }
 
 function filterPosition(FilteringPositionPlace) {
-  let positionName = FilteringPositionPlace.getAttribute('data-position');
+  const positionName = FilteringPositionPlace.getAttribute('data-position');
   const filteredPlayers = playersData.filter(player => player.position === positionName && !playersXI.includes(player.id));
   showPopUpList(filteredPlayers);
 }
@@ -191,36 +179,15 @@ function showReserves(players) {
   reserveList.innerHTML = '';
   players.forEach(player => {
     if (!playersXI.includes(player.id)) {
-      let attValue1, attValue2, attValue3, attValue4, attValue5, attValue6;
-      let attName1, attName2, attName3, attName4, attName5, attName6;
+      let attNames = [];
+      let attValues = [];
+
       if (player.position != "GK") {
-        attValue1 = "pace";
-        attValue2 = "shooting";
-        attValue3 = "passing";
-        attValue4 = "dribbling";
-        attValue5 = "defending";
-        attValue6 = "physical";
-
-        attName1 = "PAC";
-        attName2 = "SHO";
-        attName3 = "PAS";
-        attName4 = "DRI";
-        attName5 = "DEF";
-        attName6 = "PHY";
+        attValues = ["pace", "shooting", "passing", "dribbling", "defending", "physical"];
+        attNames = ["PAC", "SHO", "PAS", "DRI", "DEF", "PHY"];
       } else {
-        attValue1 = "diving";
-        attValue2 = "handling";
-        attValue3 = "kicking";
-        attValue4 = "reflexes";
-        attValue5 = "positioning";
-        attValue6 = "speed";
-
-        attName1 = "DIV";
-        attName2 = "HAN";
-        attName3 = "KIC";
-        attName4 = "REF";
-        attName5 = "POS";
-        attName6 = "SPE";
+        attValues = ["diving", "handling", "kicking", "reflexes", "positioning", "speed"];
+        attNames = ["DIV", "HAN", "KIC", "REF", "POS", "SPE"];
       }
 
       const resPlayer = document.createElement('div');
@@ -240,28 +207,28 @@ function showReserves(players) {
                     <p class="font-bold text-[.8rem] xl:text-[.9rem]">${player.name}</p>
                     <div class="flex gap-[2px]">
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName1}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue1]}</span>
+                          <span class="text-[.6rem] font-bold">${attNames[0]}</span>
+                          <span class="text-[.625rem] font-bold ">${player[attValues[0]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName2}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue2]}</span>
+                          <span class="text-[.6rem] font-bold">${attNames[1]}</span>
+                          <span class="text-[.625rem] font-bold ">${player[attValues[1]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName3}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue3]}</span>
+                          <span class="text-[.6rem] font-bold">${attNames[2]}</span>
+                          <span class="text-[.625rem] font-bold ">${player[attValues[2]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName4}</span>
-                          <span class="text-[.625rem] font-bold">${player[attValue4]}</span>
+                          <span class="text-[.6rem] font-bold">${attNames[3]}</span>
+                          <span class="text-[.625rem] font-bold">${player[attValues[3]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName5}</span>
-                          <span class="text-[.625rem] font-bold ">${player[attValue5]}</span>
+                          <span class="text-[.6rem] font-bold">${attNames[4]}</span>
+                          <span class="text-[.625rem] font-bold ">${player[attValues[4]]}</span>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                          <span class="text-[.6rem] font-bold">${attName6}</span>
-                          <span class="text-[.625rem] font-bold">${player[attValue6]}</span>
+                          <span class="text-[.6rem] font-bold">${attNames[5]}</span>
+                          <span class="text-[.625rem] font-bold">${player[attValues[5]]}</span>
                         </div>
                     </div>
       `
@@ -271,27 +238,43 @@ function showReserves(players) {
   });
 }
 
-// xiplayer = document.querySelectorAll(".players")
-// xiplayer.forEach(place => {
-//   place.addEventListener('hover', (event) => {
-//     console.log(place)
-//     event.stopPropagation();
-//     const removeBtn = place.querySelector('.remove-btn');
-//     removeBtn.addEventListener('click', (event) => {
-//       event.stopPropagation();
-//       // let theID = removeBtn.id;
-//       // const place = document.querySelector(`[name="${theID}"]`);
-//       // console.log(place)
-//       let positionShort = place.getAttribute('data-position');
-//       console.log(positionShort);
-//       place.innerHTML = `Add ${positionShort}`;
-//       place.classList.remove('gold-card');
-//       place.classList.add('holder-card');
-//       place.name = "";
-//       if (playersXI.includes(player.id)) {
-//         const playerIndex = playersXI.indexOf(player.id);
-//         playersXI.splice(playerIndex, 1);
-//       }
-//     })
-//   })
-// })
+openFormBtn.addEventListener('click', () => {
+  formPopUp.classList.toggle('hidden')
+});
+closeFormBtn.addEventListener('click', () => {
+  formPopUp.classList.toggle('hidden')
+});
+
+
+addPlayerForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const newObj = {};
+  inputs.forEach(input => {
+    let value = input.value;
+    if (input.type == 'number') {
+      value = Number(value);
+    }
+    newObj[input.name] = value;
+  });
+  newObj.id = `${playersData.length}`;
+
+  const stats = Array.from(attInputs);
+  const rate = stats.reduce((total, input) => {
+    return total + Number(input.value);
+  }, 0)
+  newObj.rating = Math.ceil(rate / 6);
+
+  newObj.photo = '../assets/images/genric-face-player.svg';
+  newObj.logo = '../assets/images/icons.webp';
+  newObj.flag = '../assets/images/fifa_globe.png';
+  newObj.position = positionInput.value;
+
+
+  playersData.push(newObj);
+  showReserves(playersData);
+  formPopUp.classList.toggle('hidden');
+  addPlayerForm.reset();
+});
+
+
