@@ -238,6 +238,28 @@ function showReserves(players) {
   });
 }
 
+positionInput.addEventListener('change', () => {
+  let labelNames = [];
+  let attNames = [];
+  const position = positionInput.value; 
+
+  if (position != "GK") {
+    labelNames = ["PAC", "SHO", "PAS", "DRI", "DEF", "PHY"]; 
+    attNames =["pace", "shooting", "passing", "dribbling", "defending", "physical"];
+  } else {
+    labelNames = ["DIV", "HAN", "KIC", "REF", "POS", "SPE"];
+    attNames = ["diving", "handling", "kicking", "reflexes", "positioning", "speed"];
+  }
+
+  attLabels.forEach((label,index)=>{
+    label.innerHTML = labelNames[index];
+  });
+  attInputs.forEach((input, index)=>{
+    input.name = attNames[index];
+  });
+
+});
+
 openFormBtn.addEventListener('click', () => {
   formPopUp.classList.toggle('hidden')
 });
@@ -270,7 +292,7 @@ addPlayerForm.addEventListener('submit', (e) => {
   newObj.flag = '../assets/images/fifa_globe.png';
   newObj.position = positionInput.value;
 
-  console.log(newObj)
+  // console.log(newObj);
   playersData.push(newObj);
   showReserves(playersData);
   formPopUp.classList.toggle('hidden');
