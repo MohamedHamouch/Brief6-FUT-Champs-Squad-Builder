@@ -17,6 +17,7 @@ const inputs = addPlayerForm.querySelectorAll('input');
 let selectedPlace;
 let playersXI = [];
 showReserves(playersData);
+
 hidePopUpBtn.addEventListener('click', () => {
   popUp.classList.toggle('hidden');
 });
@@ -33,6 +34,37 @@ function showPopUpList(data) {
   popUpList.innerHTML = "";
   data.forEach(player => {
 
+    // let attValue1, attValue2, attValue3, attValue4, attValue5, attValue6;
+    // let attName1, attName2, attName3, attName4, attName5, attName6;
+    // if (player.position != "GK") {
+    //   attValue1 = "pace";
+    //   attValue2 = "shooting";
+    //   attValue3 = "passing";
+    //   attValue4 = "dribbling";
+    //   attValue5 = "defending";
+    //   attValue6 = "physical";
+
+    //   attName1 = "PAC";
+    //   attName2 = "SHO";
+    //   attName3 = "PAS";
+    //   attName4 = "DRI";
+    //   attName5 = "DEF";
+    //   attName6 = "PHY";
+    // } else {
+    //   attValue1 = "diving";
+    //   attValue2 = "handling";
+    //   attValue3 = "kicking";
+    //   attValue4 = "reflexes";
+    //   attValue5 = "positioning";
+    //   attValue6 = "speed";
+
+    //   attName1 = "DIV";
+    //   attName2 = "HAN";
+    //   attName3 = "KIC";
+    //   attName4 = "REF";
+    //   attName5 = "POS";
+    //   attName6 = "SPE";
+    // }
 
     let attNames = [];
     let attValues = [];
@@ -300,3 +332,33 @@ addPlayerForm.addEventListener('submit', (e) => {
 });
 
 
+// const player1 = {
+//   name: "player1",
+//   nationality: "spain",
+//   club: "barcelona",
+//   league: "spanish"
+// }
+
+// const player2 = {
+//   name: "player2",
+//   nationality: "england",
+//   club: "arsenal",
+//   league: "english"
+// }
+
+// function chemCalcu(){
+//   let chem = 0;
+//   if(player1.club === player2.club){
+//     chem +=5;
+//   }
+//   if(player1.nationality === player2.nationality){
+//     chem +=2;
+//   }
+//   if(player1.league === player2.league){
+//     chem +=1;
+//   }
+  
+//   return chem;
+// }
+
+// console.log(chemCalcu);
